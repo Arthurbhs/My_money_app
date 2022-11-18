@@ -1,6 +1,6 @@
 import React from "react"
 
-export default props ==> (
+export default props => (
 <header className="maain-header">
 <a href="/#/" className="logo">
     <span className="logo-mini">
