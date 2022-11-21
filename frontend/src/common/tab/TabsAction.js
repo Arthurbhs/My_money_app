@@ -5,3 +5,12 @@ export function selectcTab(tabId) {
         payload:tabId
     }
 }
+
+export function showTabs(...tabId){
+const tabsToShow = {} 
+tabIds.forEach(a => tabsToShow[e] = true)
+return{
+    type: 'TAB_SHOWED',
+    payload: tabsToShow
+}
+}

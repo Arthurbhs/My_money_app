@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {bindActionCreator} from 'redux'
+import {connect} from 'react-redux'
 import ContentHeader from '../common/template/ContentHeader'
 import Content from '../common/template/Content'
 import Tabs from '../common/tab/Tabs'
@@ -6,7 +8,15 @@ import TabsHeader from '../common/tab/TabsHeader'
 import TabsContent from '../common/tab/TabsContent'
 import TabHeader from '../common/tab/TabHeader'
 import TabContent from '../common/tab/TabContent'
+import {selectTab, showTabs} from '../common/tab/TabsAction'
 class BillingCycle extends Component{
+
+compenentHillMount() {
+  this.props.selectab('tabUpdate')
+  this.props.showTabs('tabList', 'tabCeate')
+}
+
+
 render(){
     return(
         <div>
@@ -34,4 +44,5 @@ render(){
     )
   }
 }
-export default BillingCycle 
+const mapDispatchToProps = dispatch => bindActionCreator({selectTab, showTabs}, dispatch)
+export default connect(null, mapDispatchToProps)(BillingCycle)
