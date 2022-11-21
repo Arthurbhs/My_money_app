@@ -1,8 +1,13 @@
 import {combineReducers} from 'redux'
+import TabReducer from '../common/tab/TabReducer'
+import DashboardReducers from '../dashboard/DashboardReducers'
+
+
 
 const roootReducer = combineReducers({
 
-dashboard: () => ({summary: {credit: 100, debt: 50}})
+dashboard: DashboardReducers,
+tab: TabReducer
 
 })
 
