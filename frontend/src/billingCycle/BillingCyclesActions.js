@@ -14,6 +14,11 @@ export function getList() {
     }
 }
 
+
+export function remove(values){
+return submit(values, 'delete')
+}
+
 export function create(values) {
     return submit(values, 'post')
     
@@ -44,9 +49,9 @@ export function submit(values, method) {
 export function showUpdate(billingCycle) {
 return[
 
-
     showTabs('tabUpdate'),
     selectTab('tabUpdate'),
+   
     initialize('BillingCyclesForm', billingCycle)
 ]
 
@@ -62,3 +67,15 @@ return [
   ]
 
 }
+
+export function showDelete(billingCycle) {
+    return[
+    
+    
+        showTabs('tabDelete'),
+        selectTab('tabDelete'),
+        initialize('BillingCyclesForm', billingCycle)
+    ]
+    
+    
+    }
