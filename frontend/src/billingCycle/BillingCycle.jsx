@@ -10,6 +10,7 @@ import TabHeader from '../common/tab/TabHeader'
 import TabContent from '../common/tab/TabContent'
 import {selectTab, showTabs} from '../common/tab/TabsAction'
 import List from './BillingCyclesList'
+import { create } from './BillingCyclesActions'
 
 
 class BillingCycle extends Component{
@@ -49,5 +50,5 @@ render(){
     )
   }
 }
-const mapDispatchToProps = dispatch => bindActionCreator({selectTab, showTabs}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreator({selectTab, showTabs, create}, dispatch)
 export default connect(null, mapDispatchToProps)(BillingCycle)
