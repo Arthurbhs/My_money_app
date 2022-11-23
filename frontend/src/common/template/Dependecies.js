@@ -1,13 +1,13 @@
-import 'module/admin-lte/plugin/jQueryUI/jquery-ui.min'
-import 'module/admin-lte/plugin/fastclick/fastclick'
-import 'module/admin-lte/plugin/slimScroll/jquerry.slimscroll.min'
-import 'module/admin-lte/dist/js/app.min'
+import 'admin-lte/bootstrap/js/bootstrap.min'
+import 'admin-lte/plugins/jQueryUI/jquery-ui.min'
+import 'admin-lte/plugins/fastclick/fastclick'
+import 'admin-lte/plugins/slimScroll/jquery.slimscroll.min'
+import 'admin-lte/dist/js/app.min'
 
-import 'module/font-awesome/css/font-awesome.min.css'
-import 'module/ionicons/dist/css/ionicons.min.css'
-import 'module/admin-lte/bootstrap/css/bootstrap.min.css'
-import "module/adm-lte/dist/css/adminLTE.min.css"
-import "module/adm-lte/dist/css/skins/_all-skins.min.css"
-import "module/adm-lte/plugins/iCheck/flat/blue.css"
-
-import "./custom.css"
+import 'font-awesome/css/font-awesome.min.css'
+import 'ionicons/dist/css/ionicons.min.css'
+import 'admin-lte/bootstrap/css/bootstrap.min.css'
+import 'admin-lte/dist/css/AdminLTE.min.css'
+import 'admin-lte/dist/css/skins/_all-skins.min.css'
+import 'admin-lte/plugins/iCheck/flat/blue.css'
+import "./Custom.css"

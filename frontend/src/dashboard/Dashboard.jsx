@@ -5,7 +5,7 @@ import Row from '../common/layout/Row'
 import Content from '../common/template/Content'
 import ContentHeader from '../common/template/ContentHeader'
 import ValueBox from '../common/widget/ValueBox'
-import {bindActionCreator} from 'redux'
+import { bindActionCreators } from 'redux'
 import {getSummary} from './DashboardActions'
 
 
@@ -38,8 +38,8 @@ render() {
 
 }
 const mapStateToProps = state => ({summary: state.dashboard.summary})
-const mapDispatchToProps = dispatch => bindActionCreator({getSummary}, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
+const DispatchToProps = dispatch => bindActionCreators({getSummary}, dispatch)
+export default connect(mapStateToProps, DispatchToProps)(Dashboard)
 
 
 

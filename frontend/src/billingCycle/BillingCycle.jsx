@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {bindActionCreator} from 'redux'
+import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import ContentHeader from '../common/template/ContentHeader'
 import Content from '../common/template/Content'
@@ -8,7 +8,6 @@ import TabsHeader from '../common/tab/TabsHeader'
 import TabsContent from '../common/tab/TabsContent'
 import TabHeader from '../common/tab/TabHeader'
 import TabContent from '../common/tab/TabContent'
-import {selectTab, showTabs} from '../common/tab/TabsAction'
 import List from './BillingCyclesList'
 import { create, update, remove } from './BillingCyclesActions'
 
@@ -16,8 +15,7 @@ import { create, update, remove } from './BillingCyclesActions'
 class BillingCycle extends Component{
 
 compenentHillMount() {
-  this.props.selectab('tabUpdate')
-  this.props.showTabs('tabList', 'tabCeate')
+  this.props.init()
 }
 
 
@@ -38,9 +36,13 @@ render(){
 <TabContent id='tabList'>
   <List/>
 </TabContent>
-<TabContent id='tabCreate'> <form onSubmit={this.props.create}/></TabContent>
-<TabContent id='tabUpdate'> <form onSubmit={this.props.update}/> </TabContent>
-<TabContent id='tabDelete'><form onSubmit={this.props.remove} readOnly={true}/></TabContent>
+<TabContent id='tabCreate'> <form onSubmit={this.props.create}
+submitLabel='incluir' submmitClass='primary' />
+ </TabContent>
+<TabContent id='tabUpdate'> <form onSubmit={this.props.update}
+submitLabel='alterar' submmitClass='info'/> </TabContent>
+<TabContent id='tabDelete'><form onSubmit={this.props.remove} readOnly={true}
+submitLabel='Excluir' submmitClass='danger'/></TabContent>
     
 </TabsContent>
 
@@ -50,5 +52,5 @@ render(){
     )
   }
 }
-const mapDispatchToProps = dispatch => bindActionCreator({selectTab, showTabs, create, update, remove}, dispatch)
-export default connect(null, mapDispatchToProps)(BillingCycle)
+const DispatchToProps = dispatch => bindActionCreators({init, create, update, remove}, dispatch)
+export default connect(null, DispatchToProps)(BillingCycle)

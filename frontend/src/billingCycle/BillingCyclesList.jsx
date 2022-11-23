@@ -41,7 +41,7 @@ render() {
                 <th>Nome</th>
                 <th>Mês</th>
                 <th>Ano</th>
-                <th>açoes</th>
+                <th className='table-actions'>açoes</th>
 
             </tr>
         </thead>

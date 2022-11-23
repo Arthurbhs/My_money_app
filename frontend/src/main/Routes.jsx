@@ -1,17 +1,16 @@
 import React from 'react'
-import {Router, Route, Redirect, hashHistory} from 'react-router'
+import { Switch, Route, Redirect } from 'react-router'
 
 
 import BillingCycle from '../billingCycle/BillingCycle'
-import DashboardTwo from '../dashboard2/DashboardTwo'
+import Dashboard from '../dashboard/Dashboard'
 
 export default props => (
-    <Router history={hashHistory}>
-        <Route path='/' component={DashboardTwo} />
-        <Route path='/billingCycle' component={BillingCycle}/>
-        <Redirect fromm='*' to='/' />
-
-       
-
-    </Router>
+    <div className='content-wrapper'> 
+    <Switch>
+        <Route exact path='/' component={Dashboard} />
+        <Route path='/billingCycles' component={BillingCycle} />
+        <Redirect from='*' to='/' />
+    </Switch>
+</div>
 )

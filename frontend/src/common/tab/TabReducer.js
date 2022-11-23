@@ -1,6 +1,6 @@
 const INITIAL_STATE = {  selcted: '', visible: {}}
 
-export default (state = INITAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
 
 case 'TAB_SELECTED':
